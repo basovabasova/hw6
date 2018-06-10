@@ -8,9 +8,9 @@
 
             if ($path_info['extension'] === 'json') {
                 move_uploaded_file($tmp, $uploaddir . $file);
-                $a = "Файл передан" . '<br>';
+                $a = 'Файл передан' . '<br>';
             } else {
-                $a = "Файл не передан, нужен файл json." . '<br>';
+                $a = 'Файл не передан, нужен файл json.' . '<br>';
             }
         }
     }
@@ -23,7 +23,7 @@
   <title>Загрузить тесты</title>
 </head>
 <body>
-  <form method="post" enctype="multipart/form-data" name="myform">
+  <form method="post" enctype="multipart/form-data">
     <legend>Загрузить тесты</legend>
       <label><input type="file" name="usefile1"><?php echo $a;?></label>
       <label><input type="file" name="usefile"><?php echo $a;?></label>

@@ -39,7 +39,7 @@
   <title><?=$test_number?></title>
 </head>
 <body>
-  <form method="POST">
+  <form method="post">
     <?php 
         foreach ($questions as $keys => $value) { ?> 
           <fieldset>
@@ -58,16 +58,16 @@
   <?php 
       if (!empty($_POST) && $answers) {
           if (!array_diff($answers, $answers_true) && (count($answers) === count($answers_true))) {
-              echo "Тест пройден!" . '<br>';
+              echo 'Тест пройден!' . '<br>';
           } else {
-              echo "Тест не пройден, попробуйте еще раз." . '<br>';
+              echo 'Тест не пройден, попробуйте еще раз.' . '<br>';
           }
           $count_true = count(array_intersect($answers, $answers_true));
           echo "Правильных ответов: $count_true";
       }    
 
       if (isset($_POST['check']) && !$answers) {
-          echo "Еще разок!" . '<br>';
+          echo 'Еще разок!' . '<br>';
       }   
   ?>
   <p><a href="list.php">Выбрать тест</a></p>
