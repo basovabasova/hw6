@@ -28,6 +28,7 @@
       <label><input type="file" name="usefile1"><?php echo $a;?></label>
       <label><input type="file" name="usefile"><?php echo $a;?></label>
     <input type="submit" value="Отправить"><br>
+  </form>
   <p><a href="list.php">Выбрать тест</a></p>
 </body>
 </html>
